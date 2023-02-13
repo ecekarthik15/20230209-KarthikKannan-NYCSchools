@@ -18,7 +18,7 @@ struct NYCSchoolWebView: UIViewRepresentable {
     }
  
     func updateUIView(_ webView: WKWebView, context: Context) {
-        if let url = URL(string: url) {
+        if let url = URL(string: "https://\(url)") {
             let request = URLRequest(url: url)
             webView.load(request)
         }
